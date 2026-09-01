@@ -1,0 +1,13 @@
+{
+  "name": "coffeejson",
+  "description": "Agent skills for CoffeeJSON, one per relationship you can have to the format. Changing it, covering schema and corpus validation, field and reshape design through four lenses, and the fixture-first landing cycle. Integrating it, covering the pattern that relates your model to the wire document, the intake and export checklists, the failure vocabulary and the version gate, the transport bindings, the reference SDKs, and the conformance corpora. Writing one, covering faithful transcription from a published source, where each fact lands, the vocabularies and registries, and the authoring lint.",
+  "version": "1.0.0",
+  "author": {
+    "name": "coffeejson-org",
+    "url": "https://github.com/coffeejson-org"
+  },
+  "homepage": "https://coffeejson.org",
+  "repository": "https://github.com/coffeejson-org/skills",
+  "license": "Apache-2.0",
+  "keywords": ["coffeejson", "json-schema", "specification", "coffee"]
+}

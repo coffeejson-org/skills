@@ -1,0 +1,14 @@
+{
+  "name": "coffeejson",
+  "owner": {
+    "name": "coffeejson-org",
+    "url": "https://github.com/coffeejson-org"
+  },
+  "plugins": [
+    {
+      "name": "coffeejson",
+      "source": "./",
+      "description": "Agent skills for CoffeeJSON. One for changing the format, covering schema validation, field design, and landing a change fixture-first. One for integrating it into an app, service or site, covering the integration patterns, the intake and export checklists, transport, the SDKs, and conformance. One for writing a document from a published source, covering faithful transcription, field placement, vocabulary mapping, and validation."
+    }
+  ]
+}
