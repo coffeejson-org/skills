@@ -2,15 +2,15 @@
 
 ## Read the published table first
 
-The site's page for agents, at `/for-ai-agents/` on the canonical host,
-carries a table of the mistakes a generating model makes, beside a copyable
-system-prompt fragment and a small set of few-shot examples. Every example on
-that page is validated against the published schema in continuous
-integration, so it cannot drift. It covers the shape errors: a bare number
-where a quantity belongs, a display symbol where a unit identifier belongs,
-`to_water` read as an increment, `at_s` read as a duration, a grind string
-where the grind object belongs, and an origin array where the origin object
-belongs.
+The site's guide for agents, at `/agents.md` on the canonical host — the
+same guide `/agents/` renders for a reader with a browser — carries a table
+of the mistakes a generating model makes, beside a copyable system-prompt
+fragment and a small set of few-shot examples. Every example in it is
+validated against the published schema in continuous integration, so it
+cannot drift. It covers the shape errors: a bare number where a quantity
+belongs, a display symbol where a unit identifier belongs, `to_water` read
+as an increment, `at_s` read as a duration, a grind string where the grind
+object belongs, and an origin array where the origin object belongs.
 
 Read it, and do not restate it. What follows is what transcription work knows
 that the page does not.

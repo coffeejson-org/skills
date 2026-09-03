@@ -43,7 +43,7 @@ have no checkout.
 | Which tier a fact belongs to, and what the format refuses to carry | `docs/spec/01-overview.md`, section Design principles |
 | Every controlled vocabulary and its fallback | `docs/spec/06-vocabularies.md`, the index table |
 | The registries themselves | `registries/gear.json`, `registries/varietals.json`, `registries/addition-types.json`, `registries/producer-roles.json` |
-| The mistakes a generating model makes, with a validated example set | The site's page for agents, at `/for-ai-agents/` |
+| The mistakes a generating model makes, with a validated example set | The site's guide for agents, at `/agents.md` — `/agents/` renders the same guide |
 | The whole specification in one context | `/llms-full.txt`, 196 KB. Only when you need all of it at once |
 | What a transcription is, and what it is not | `recipes/README.md` |
 | How a document reaches the public corpus | `CONTRIBUTING.md` |
