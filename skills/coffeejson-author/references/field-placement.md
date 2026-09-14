@@ -142,5 +142,4 @@ a published page.
 rating attaches to a cup, never to a coffee.
 
 **A structured cupping score.** Reserved by name in
-`docs/spec/07-versioning.md`, section Reserved extensions, and not part of
-v1.0.
+`docs/spec/07-versioning.md`, section Reserved extensions, and not defined.

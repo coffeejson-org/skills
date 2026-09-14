@@ -102,11 +102,12 @@ knowing as a consumer because they are the reason your reader does not have to
 defend against those cases.
 
 **Check the compatibility posture rather than assuming it.**
-`docs/spec/07-versioning.md`, section Evolving 1.0 in place, states a
+`docs/spec/07-versioning.md`, section Evolving 1.x in place, states a
 condition, not a date. While that clause holds the format may still change
-shape in place, relocating or removing a field included, with no version
-bump. That latitude ends at first outside adoption, after which the additive
-rules bind unconditionally. Read the section. A consumer that assumed the wrong
+shape in place, relocating or removing a field included, and a breaking change
+ships as the next minor with a changelog entry that says **Breaking**. That
+latitude ends at first outside adoption, after which the additive rules bind
+unconditionally. Read the section. A consumer that assumed the wrong
 side of that line is wrong silently.
 
 ### The update pass, when the format or an SDK has moved

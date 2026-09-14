@@ -244,13 +244,15 @@ generalized to structure through `basis`.
 
 ## 9. Compatibility posture
 
-`docs/spec/07-versioning.md`, section Evolving 1.0 in place, states the
+`docs/spec/07-versioning.md`, section Evolving 1.x in place, states the
 condition rather than a date. While CoffeeJSON has a single implementer and no
 second consumer to keep compatible, the format may evolve directly, relocating
-or removing a field included, with no version bump and no compatibility shim.
-The version stays `"1.0"`, the `$id` stays put, and `CHANGELOG.md` records each
-change. **That latitude ends at first outside adoption**, after which the
-additive-only rules bind unconditionally.
+or removing a field included, and no compatibility shim ships with the change.
+A breaking change ships as the next minor, and its `CHANGELOG.md` entry says
+**Breaking**. `2.0` is kept for a fundamental change. The `$id` stays put
+because it names the major line, and `CHANGELOG.md` records every change.
+**That latitude ends at first outside adoption**, after which the additive-only
+rules bind unconditionally.
 
 Read the section rather than assuming. Two consequences follow from whichever
 side of the line the format is on.

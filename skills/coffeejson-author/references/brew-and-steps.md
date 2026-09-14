@@ -77,7 +77,7 @@ basis and a `water` it does not have is demanded.
 
 Espresso also takes `pressure`, `preinfusion_s`, `basket` and `finish_s`, the
 shot time. The espresso machine is the recipe's `brewer` as usual. A
-multi-phase pressure profile is not modeled in v1.0 and goes into a `pull`
+multi-phase pressure profile is not modeled and goes into a `pull`
 step's `instruction` as text.
 
 ## Ratio

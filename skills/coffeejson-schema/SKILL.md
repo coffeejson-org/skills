@@ -54,12 +54,13 @@ already settled.
    proposal that ignores the record reads as ignorance and costs a round trip.
    A proposal that engages it and argues better is welcome.
 4. **Check the compatibility posture.** `docs/spec/07-versioning.md`, section
-   Evolving 1.0 in place. While its evolve-in-place clause holds, the format
+   Evolving 1.x in place. While its evolve-in-place clause holds, the format
    may still change shape in place, relocating or removing a field included,
-   with no version bump and no compatibility shim. That latitude ends at first
-   outside adoption, after which the additive-only rules bind unconditionally.
-   Read the section rather than assuming which side of that line the format is
-   on today.
+   and no compatibility shim ships with the change. A breaking change ships as
+   the next minor, and its changelog entry says **Breaking**. That latitude
+   ends at first outside adoption, after which the additive-only rules bind
+   unconditionally. Read the section rather than assuming which side of that
+   line the format is on today.
 5. **Run the harness first.** `pnpm install` then `pnpm test`. A red base is
    worth reporting before you add to it.
 
@@ -133,8 +134,9 @@ out of it later costs, which is nothing.
   exists. Optional is the default and almost always the answer.
 - **Absence is the null.** No member ever carries `null`. A value the producer
   does not have is a key it does not emit.
-- **`"coffeejson": "1.0"` and the schema `$id` stay put** while the
-  evolve-in-place clause of `docs/spec/07-versioning.md` holds.
+- **The schema `$id` stays put.** It names the major line, so every minor
+  re-publishes at it. The `coffeejson` version string moves with each minor;
+  read the current one from `CHANGELOG.md` rather than assuming it.
 - **You recommend, a maintainer decides.** Never resolve a genuine fork on your
   own authority. Put it in a Decisions table in the pull request description or
   the issue, with the options, their trade-offs, and your favorite. Never write

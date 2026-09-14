@@ -168,7 +168,7 @@ Omit `role` when the source does not label the party.
 
 ## Free strings stay free
 
-`drying_method` and `certifications` have no controlled vocabulary in v1.0.
+`drying_method` and `certifications` have no controlled vocabulary.
 Carry the source's word, in snake case where it reads naturally as a token,
 and never normalize a narrower claim into a broader one. `grind.setting`,
 `harvest_time` and every descriptor keep the source's own spelling, spacing

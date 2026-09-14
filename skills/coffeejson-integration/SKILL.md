@@ -44,7 +44,7 @@ have no checkout.
 | Field inventory and constraints | `docs/schema/coffeejson-1.0.schema.json` |
 | What a field means | `docs/spec/02-envelope.md` through `06-vocabularies.md`. Prose wins over the schema wherever they differ |
 | What an unknown enum value falls back to | `docs/spec/06-vocabularies.md`, the index table |
-| Whether the format may still move under you | `docs/spec/07-versioning.md`, section Evolving 1.0 in place |
+| Whether the format may still move under you | `docs/spec/07-versioning.md`, section Evolving 1.x in place |
 | Your executable test suite | `fixtures/README.md`, and `fixtures/transport/scan-vectors.json` |
 | How to get listed | `registries/implementations.json` |
 

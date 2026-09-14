@@ -29,9 +29,10 @@ is the evidence that the gap is real.
    - A new **value or relaxation**, meaning an enum value, an opened registry
      or a new optional shape, gets a `fixtures/valid/` document that uses it
      and today wrongly **fails**.
-   - Fixture shape is a complete document, meaning `"coffeejson": "1.0"` with
-     `recipes`, `beans` or both. Keep it minimal but realistic, with real gear
-     and real coffees, because the corpus doubles as documentation.
+   - Fixture shape is a complete document, meaning `coffeejson` at the
+     current minor with `recipes`, `beans` or both. Keep it minimal but
+     realistic, with real gear and real coffees, because the corpus doubles as
+     documentation.
 2. **Run the harness** and confirm the wrong result out loud. This is the
    evidence the change does something.
 3. **Change the schema,** in `docs/schema/coffeejson-1.0.schema.json`, with a
@@ -89,9 +90,9 @@ so grep for the old anchor after any rename.
 - **The prose wins.** Where your schema change and the prose disagree, the
   prose is the design and the schema is the bug.
 - **Absence is the null.** No member carries `null`, ever.
-- **`"coffeejson": "1.0"` and the schema `$id` stay put** while the
-  evolve-in-place clause of `docs/spec/07-versioning.md` holds. Check the
-  section rather than assuming.
+- **The schema `$id` stays put.** It names the major line, so every minor
+  re-publishes at it. The `coffeejson` version string moves with each minor.
+  Check `docs/spec/07-versioning.md` rather than assuming.
 - **Published ids are stable.** Correct a registry mistake by adding a new slug
   and aliasing the old one. Never repurpose what a slug means.
 - **A pull request states what it changes** and carries the checklist in the
