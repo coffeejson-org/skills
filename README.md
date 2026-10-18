@@ -45,8 +45,10 @@ alone a skill is whole, because nothing in its folder points outside it.
 Node with pnpm for the validation harness.
 
 `coffeejson-integration` assumes your own codebase, plus the published
-specification for reference. The same files are served from the canonical host,
-so a checkout is convenient rather than required.
+specification for reference. The canonical host serves `docs/` and
+`registries/` at their repository paths and the schemas at their `$id`, so a
+checkout is convenient rather than required. The fixtures it tests against live
+only in the repository.
 
 `coffeejson-author` assumes you already have the source text in front of you.
 It never fetches a page. A checkout gives you the validation commands, and the

@@ -2,8 +2,8 @@
 
 ## Read the published table first
 
-The site's guide for agents, at `/agents.md` on the canonical host — the
-same guide `/agents/` renders for a reader with a browser — carries a table
+The site's guide for agents, at `/agents.md` on the canonical host, which
+`/agents/` renders for a reader with a browser, carries a table
 of the mistakes a generating model makes, beside a copyable system-prompt
 fragment and a small set of few-shot examples. Every example in it is
 validated against the published schema in continuous integration, so it

@@ -24,7 +24,7 @@ field.
 
 | File | Owns |
 | --- | --- |
-| `SKILL.md` | Orientation, the pattern table, the route by task, the hard rules. Loads in full on every fire, so it carries only what a run reads. |
+| `SKILL.md` | Where truth lives, the done-when for an integration, the pattern table, the route by task, the `ext` route, the hard rules. Loads in full on every fire, so it carries only what a run reads. |
 | `references/patterns.md` | The pattern consequences, the carry-raw contract, and where `ext` lands under each pattern. |
 | `references/consuming.md` | The import checklist step by step, the twelve failure names, the version gate, and the read side of the transport bindings. |
 | `references/producing.md` | The export checklist, the authoring lint, the share link and its fallback page, and the QR choice. |
@@ -38,6 +38,28 @@ decision a reader makes before writing any code, and a run that reaches the
 storage model without having made it has already made it by default. The
 default is direct mapping, and direct mapping loses every field the product did
 not name. The consequences live in the reference; the choice does not.
+
+**The pattern choice comes before any code, and done is the corpora.** These
+are the two lines left of what used to be an orientation sequence. The first
+prevents the default to direct mapping. The second moves completion off the
+integrator's own tests, which pass on a reader that two other implementations
+would disagree with.
+
+**Member names are checked against the schema, not memory.** A run that
+reviews a hand-mapped model judges its shape and takes its member names on
+trust, so a model that reads `name` where the format says `title` gets a
+design review and keeps its bug. The sentence says where memory fails and
+what to check; without it, most runs never open the schema.
+
+**The body says which paths the site serves, and only those.** The site serves
+`docs/` and `registries/` at their repository paths and the schemas at their
+`$id`. The fixtures live only in the repository. A run without a checkout that
+is told every path is served fetches a schema URL, gets a not found, and
+gives up on checking names.
+
+**The hard rules are stated without their reasons.** Each rule names the
+reference that carries its mechanism, and the rule is what a run must not miss
+while it writes code.
 
 **Each pattern row names what the next format revision costs.** That column is
 the argument. Without it the table reads as a taxonomy and a reader picks the
@@ -76,7 +98,61 @@ repository's file would resolve nowhere. Those paths are code spans.
 
 ## Tuning
 
-Cast the reader by the failure you are seeing.
+Cast the reader by the failure you are seeing. Where a line was cut from
+`SKILL.md` because current models do it unprompted, the entry quotes it so it
+can go back when that stops holding.
+
+**Builds both directions at once,** meaning it will not ship an importer until
+the exporter exists. The body once had an orientation step, *decide your
+roles*, defining consumer and producer from `docs/spec/01-overview.md`, section
+Conformance language, and saying importing well is worth shipping on its own.
+One clause of it remains above the pattern table.
+
+**Writes a parser per channel,** meaning a link handler and a QR scanner each
+get their own decoding. The body once said all four intake channels, a link
+handler, a QR scanner, a file import and an HTTP fetch, carry the identical
+payload, so a second channel never changes the parser. `consuming.md` section 1
+carries it now.
+
+**Validates against a moving schema,** meaning a build-time check breaks when
+the format changes in place. The body once said to pin a copy of the schema
+when validating at build time, and to read `docs/spec/07-versioning.md`,
+section Evolving 1.x in place, rather than assume which side of its line the
+format is on. The update pass in `conformance.md` re-pins it now.
+
+**Picks the row that sounds most complete,** meaning direct or generated
+mapping for a product that only renders. The table once opened with *read the
+row that matches what your product does, not the row that sounds most
+complete*, and the reader's-words paragraph opened with *a reader arriving
+with other words finds the row here*.
+
+**Rejects an unknown enum value or falls back wrongly,** meaning it has no
+fallback rule to hand. The truth table once carried a row sending it to the
+index table in `docs/spec/06-vocabularies.md`. The field-meaning row still
+covers that chapter.
+
+**Loses the subject,** meaning it treats the format as something other than a
+brew and its coffee, or reads "product" too narrowly. The body once opened
+with *CoffeeJSON is an open JSON format for a coffee brew and the coffee it
+was made from*, and named the products as an app, a hosted service, a
+roaster's site, a script, or a library in any language. The description now
+carries both.
+
+**Argues with a hard rule,** meaning it treats one as arbitrary and works
+around it. The rules once carried their reasons. An unknown member or enum
+value is never a reason to reject. The published schema rejects vocabulary
+values a newer minor may define, so a valid future document fails it. Same
+major and a newer minor is an accept, and a newer major may be rejected with a
+message that says so. Not UTF-8, not JSON and not a document are three defects
+with three fixes. A compressed payload is inflated under the bound rather than
+inflated and measured afterwards. Convert a recognized unit into your own
+canonical store. Re-emitting an unedited import carries the members you did
+not recognize, and a rebuild from your own model may drop them, which you tell
+the user. A consumer that reads `generator` for behavior is broken. Under
+`ext`, a bare member invented on a defined entity is ignored by every other
+consumer, and a defined field keeps its defined meaning whatever your storage
+would prefer. Put back the reason for the rule it argues with, not all of
+them.
 
 **Skips the pattern choice,** meaning it starts hand-mapping fields into a
 model before anyone asked which shape the integration takes. Point at the

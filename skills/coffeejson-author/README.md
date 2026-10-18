@@ -46,7 +46,7 @@ the thing the integration skill has no reason to: a corpus document carries no
 
 | File | Owns |
 | --- | --- |
-| `SKILL.md` | The transcriber posture, the loop, the source rules in short form, the route by task, the hard rules. Loads in full on every fire, so it carries only what a run reads. |
+| `SKILL.md` | The transcriber posture and its done-when, the authoring-schema line, the source rules in short form, the route by task, the hard rules. Loads in full on every fire, so it carries only what a run reads. |
 | `references/source-rules.md` | Single-source fidelity, the divergence cases and their tiebreaks, pointers against claims, the two traps that look like data, and the attribution posture. |
 | `references/field-placement.md` | The provenance tiers, the bean and recipe split, the four provenance surfaces, the Party shape, and a fact-to-member table. |
 | `references/brew-and-steps.md` | Quantities and units, stated windows, the `basis` switch, ratio, split water, additions, and the step model. |
@@ -67,10 +67,26 @@ without having read them resolves it by picking the more plausible number.
 Their failures live in the reference; the rules themselves cannot wait for a
 routing decision.
 
-**Absence is stated three times.** In the source rules, in the hard rules, and
-in the mistakes table. It is the most common failure and the only one a
+**Absence is stated three times.** In the opening posture, in the source
+rules, and in the mistakes table. It is the most common failure and the only one a
 validator can catch on the way out, so repetition here is cheaper than a
 document that invented a temperature.
+
+**The schema to validate against is the one line left of the loop.** Reading,
+emitting, validating and fixing is what a current model does unprompted. Which
+schema it validates against is not: the runtime schema is the one it finds
+first, and it passes a misspelled key in silence.
+
+**No example document or fragment appears in the skill.** An example is a copy
+of the schema's shape. It goes stale on every format move, and this
+repository's check cannot validate it. The site's page for agents carries the
+wrong and right pairs, generated and validated upstream on every push, so the
+truth table and the hard rules name the pairs and point there.
+
+**The source rules and hard rules are stated without their reasons.**
+`source-rules.md` and `mistakes.md` carry each one with the failure behind it.
+The rule is what a run needs in hand while it writes; the reason is what it
+reaches when it is tempted to break one.
 
 **The mistakes table cites the published page rather than restating it.** The
 site's page for agents is validated in continuous integration, so its examples
@@ -118,9 +134,68 @@ badly; the same rule stated as a shape of page is permanent.
 link.** A skill installs onto someone else's machine, so a link to another
 repository's file would resolve nowhere. Those paths are code spans.
 
+**The body says which paths the site serves, and only those.** The site serves
+`docs/` and `registries/` at their repository paths and the schemas at their
+`$id`. Everything else, the fixtures, `recipes/README.md` and
+`CONTRIBUTING.md` among them, lives only in the repository. A run without a
+checkout that is told every path is served fetches a schema URL, gets a not
+found, and stops checking member names.
+
 ## Tuning
 
-Cast the reader by the failure you are seeing.
+Cast the reader by the failure you are seeing. Where a line was cut from
+`SKILL.md` because current models do it unprompted, the entry quotes it so it
+can go back when that stops holding.
+
+**Writes before it has read,** meaning it starts emitting at the first stated
+fact and misses a later surface that contradicts it. The body once carried the
+loop as four numbered steps: read the source once, end to end, before writing
+anything; emit; validate against the authoring schema; fix and validate again.
+
+**Fetches the page,** meaning it goes to the address instead of working from
+the text it was handed. The body once said the source text arrives with the
+task, so fetching it is out of scope. The first half remains; restore the
+second.
+
+**Builds the importer,** meaning a transcription turns into share links or a
+storage model. The body once said an application's importer, exporter, share
+link or storage model is the integration skill's. The description now carries
+the seam.
+
+**Loads the whole specification,** meaning it reaches for everything at once
+when one chapter would do. The truth table once offered `/llms-full.txt` for
+the times a run needs all of it in one context. It went because
+`https://coffeejson.org/llms.txt` indexes every served chapter by address, so
+a run fetches the one it needs.
+
+**Keeps a commercial fact,** meaning price, stock, bag size or a cup score
+lands somewhere in the document. The body once stated the test from
+`docs/spec/01-overview.md`, principle 4: whether the fact would still be true,
+and still about this coffee, a year from now in someone else's hands. It
+sorted the losers into commercial state, third-party judgment and personal
+state, and told a corpus transcriber to record what the format could not
+carry and hand it to whoever maintains the format.
+
+**Argues with a source rule or a hard rule,** meaning it treats one as
+fussiness and works around it. The rules once carried their reasons. A merged
+document cites a page that does not say what it says. An inferred temperature,
+a derived ratio or a `recommended` the roaster never marked is the one failure
+no validator catches, and it stays wrong forever because nothing downstream
+can tell. A `drying_method` value is the source's own word, and a `url` points
+at the coffee rather than a shopping state. A varietal stays in the source's
+script and the registry's alias map makes it matchable, and translating or
+normalizing is authoring. The original language is upstream of its own
+translation, and a divergence is recorded rather than reconciled. On a page
+that contradicts itself the labelled field wins and the prose ships verbatim.
+A guessed gear slug validates and matches nothing. A quantity is
+`{ "value": 15, "unit": "gram" }`, never `15` or `"15g"`. `to_water` is the
+scale's target at the end of the step and `at_s` the seconds from brew start
+to the step's cue. Origin, process, roast and roaster belong to the bean even
+when one page prints both. A tasting is one cup for one drinker on one
+occasion, which a page never states. The body also said the specification is
+right wherever it and the skill disagree, and that the source rules decide
+most of the hard calls. Put back the reason for the rule it argues with, not
+all of them.
 
 **Authors,** meaning it fills a gap the source left. A temperature that
 matches the method, a ratio computed from the dose and the total, a step
